@@ -2,12 +2,12 @@ export const navLinks = [
 
     {
         label: 'About',
-        pathname: '/',
+        pathname: '/portfolio/',
         hash: '#about',
     },
     {
         label: 'Projects',
-        pathname: '/',
+        pathname: '/portfolio/',
         hash: '#project-1',
     },
     
@@ -18,12 +18,12 @@ export const navLinks = [
 
     {
         label: 'Skills',
-        pathname: '/skills',
+        pathname: '/portfolio/skills',
     },
 
     {
         label: 'Contact',
-        pathname: '/contact',
+        pathname: '/portfolio/contact',
     },
 ]
 

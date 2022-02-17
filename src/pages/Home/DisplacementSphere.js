@@ -28,6 +28,7 @@ import './DisplacementSphere.css'
 
 const DisplacementSphere = props => {
     const theme = useTheme()
+    console.log(theme)
     const { rgbBackground, themeId, colorWhite } = theme
     const start = useRef(Date.now())
     const canvasRef = useRef()
