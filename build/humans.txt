@@ -1,0 +1,35 @@
+The humans.txt file explains the team, technology,
+and graphic assets behind this site 
+
+Learn More at humanstxt.org.
+
+_______________________________________________________________________________
+
+DESIGNER
+
+
+Hand crafted design & web development
+
+Design tools:
+Figma
+Inkscape
+
+github.com/ciphertext
+
+
+theme motivation from 
+ALEN Yohannan
+_______________________________________________________________________________
+
+TECHNOLOGY 
+
+React
+ThreeJs
+Popmotion
+
+_______________________________________________________________________________
+
+FONTS
+
+Gotham
+Hiragino Kaku Gothic
