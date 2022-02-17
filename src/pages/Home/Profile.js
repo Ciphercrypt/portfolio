@@ -6,7 +6,7 @@ import DecoderText from 'components/DecoderText'
 import Divider from 'components/Divider'
 import Image from 'components/Image'
 import Section from 'components/Section'
-import ProfileImg from 'assets/AI_M.jpg'
+import ProfileImg from 'assets/AI_M.jpeg'
 import ProfileImgPlaceholder from 'assets/profile-placeholder.jpg'
 import { reflow } from 'utils/transition'
 import { media } from 'utils/style'
@@ -52,9 +52,8 @@ const ProfileText = ({ status, titleId }) => (
         >
            I am The Software Engineer in Penultimate Year of Computer Engineering 
            at @ Veermata Jijabai Technological Institute (VJTI),Mumbai .
-            I am highly skilled in C++,Python , PHP CodeIgniter , Advanced Database Management
-             and Operating Systems. I also have mastered Strong Competitive Programming skills 
-             with 5 Star Ratings on CodeChef .
+           I am highly interested in full stack web development and application development. I also have mastered Strong Competitive Programming skills 
+            with 5 Star Ratings on CodeChef .
 
         </Text>
         <Text
@@ -64,8 +63,7 @@ const ProfileText = ({ status, titleId }) => (
             )}
             size="l"
         >
-            In my spare time I like to watch  movies or analyse human civilisational  history considering many different perspectives . I’m always down for
-            hearing about new projects, so feel free to drop me a line.
+            In my spare time I like to watch  movies or learning about finance and equity markets.I'm always ready for new projects so dont hesitate to drop me a message.
         </Text>
     </Fragment>
 )
@@ -95,7 +93,7 @@ const Profile = ({ id, visible, sectionRef }) => {
                                     'profile__button',
                                     `profile__button--${status}`
                                 )}
-                                href="/contact"
+                                href="/portfolio/contact"
                                 icon="send"
                             >
                                 Send me a message
@@ -110,7 +108,7 @@ const Profile = ({ id, visible, sectionRef }) => {
                                     placeholder={ProfileImgPlaceholder}
                                     srcSet={`${ProfileImg} 480w, ${ProfileImg} 960w`}
                                     sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
-                                    alt="To shy to upload my own picture hehehehehe"
+                                    alt="profile image"
                                 />
                                 <KatakanaProfile
                                     className={classNames(

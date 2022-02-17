@@ -59,6 +59,7 @@ const App = () => {
 const AppRoutes = () => {
     const location = useLocation()
     const { pathname } = location
+    console.log(pathname)
 
     return (
         <Fragment>
@@ -95,10 +96,10 @@ const AppRoutes = () => {
                             >
                                 <Suspense fallback={<Fragment />}>
                                     <Switch location={location}>
-                                        <Route exact path="/" component={Home} />
-                                        <Route path="/contact" component={Contact} />
+                                        <Route exact path="/portfolio" component={Home} />
+                                        <Route path="/portfolio/contact" component={Contact} />
                                         {/* <Route path="/articles" component={Articles} /> */}
-                                        <Route path="/skills" component={Uses} />
+                                        <Route path="/portfolio/skills" component={Uses} />
                                         <Route component={Page404} />
                                     </Switch>
                                 </Suspense>
