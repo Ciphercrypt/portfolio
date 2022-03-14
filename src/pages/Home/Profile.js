@@ -13,6 +13,7 @@ import { media } from 'utils/style'
 import { ReactComponent as KatakanaProfile } from 'assets/my_img_clear.svg'
 import Heading from 'components/Heading'
 import Text from 'components/Text'
+import Link from 'components/Link'
 import './Profile.css'
 
 const ProfileText = ({ status, titleId }) => (
@@ -41,7 +42,7 @@ const ProfileText = ({ status, titleId }) => (
                             </div>
 
 
-            <DecoderText text="Hi there" start={status !== 'exited'} delay={500} />
+            <DecoderText text="Hi there ," start={status !== 'exited'} delay={500} />
         </Heading>
         <Text
             className={classNames(
@@ -50,10 +51,25 @@ const ProfileText = ({ status, titleId }) => (
             )}
             size="l"
         >
-           I am The Software Engineer in Penultimate Year of Computer Engineering 
-           at @ Veermata Jijabai Technological Institute (VJTI),Mumbai .
-           I am highly interested in full stack web development and application development. I also have mastered Strong Competitive Programming skills 
-            with 5 Star Ratings on CodeChef .
+           I am Software Developer  in Penultimate Year of Computer Engineering 
+           at @ 
+           <Link  href="https://vjti.ac.in/" target="_blank">
+           Veermata Jijabai Technological Institute (VJTI),Mumbai . 
+            
+        </Link>
+        {' '}I live most of my life on{' '}  
+        <Link  href="https://auth.geeksforgeeks.org/user/aviciphercrypt/practice/" target="_blank">
+        GeeksForGeeks
+            
+        </Link> ,
+        <Link  href="https://leetcode.com/ciphercrypt/" target="_blank">
+        LeetCode
+            
+        </Link> and {' '}
+        <Link  href="https://github.com/Ciphercrypt/" target="_blank">
+         Github
+            
+        </Link>. I also work in full stack web application development with recent focus on flutter development.  
 
         </Text>
         <Text
@@ -63,7 +79,7 @@ const ProfileText = ({ status, titleId }) => (
             )}
             size="l"
         >
-            In my spare time I like to watch  movies or learning about finance and equity markets.I'm always ready for new projects so dont hesitate to drop me a message.
+            In my spare time I watch movies or surf on Reddit .I'm more nerdier than you , so don't hesitate a bit to message me for new projects or for random discussion on anything in the world.
         </Text>
     </Fragment>
 )
