@@ -41,6 +41,8 @@ const DisplacementSphere = props => {
     const material = useRef()
     const geometry = useRef()
     const sphere = useRef()
+    //const sphere1 = useRef()
+    const sphere2 = useRef()
     const tweenRef = useRef()
     const sphereSpring = useRef()
     const prefersReducedMotion = usePrefersReducedMotion()
@@ -60,7 +62,7 @@ const DisplacementSphere = props => {
         renderer.current.outputEncoding = sRGBEncoding
 
         camera.current = new PerspectiveCamera(54, innerWidth / innerHeight, 0.1, 100)
-        camera.current.position.z = 52
+        camera.current.position.z = 82
 
         scene.current = new Scene()
 
@@ -78,12 +80,24 @@ const DisplacementSphere = props => {
             shader.fragmentShader = fragShader
         }
 
-        geometry.current = new SphereBufferGeometry(32, 128, 128)
+        geometry.current = new SphereBufferGeometry(25, 300, 300)
 
         sphere.current = new Mesh(geometry.current, material.current)
         sphere.current.position.z = 0
         sphere.current.modifier = Math.random()
         scene.current.add(sphere.current)
+
+
+
+        // sphere1.current = new Mesh(geometry.current, material.current)
+        // sphere1.current.position.z = 0
+        // sphere1.current.modifier = Math.random()
+        // scene.current.add(sphere1.current)
+
+        sphere2.current = new Mesh(geometry.current, material.current)
+        sphere2.current.position.z = 0
+        sphere2.current.modifier = Math.random()
+        scene.current.add(sphere2.current)
 
         return () => {
             cleanScene(scene.current)
@@ -92,12 +106,12 @@ const DisplacementSphere = props => {
     }, [])
 
     useEffect(() => {
-        const dirLight = new DirectionalLight(colorWhite, 0.6)
-        const ambientLight = new AmbientLight(colorWhite, themeId === 'light' ? 0.8 : 0.1)
+        const dirLight = new DirectionalLight(colorWhite, 0.4)
+        const ambientLight = new AmbientLight(colorWhite, themeId === 'light' ? 0.8 : 0.3)
 
         dirLight.position.z = 200
-        dirLight.position.x = 100
-        dirLight.position.y = 100
+        dirLight.position.x = 200
+        dirLight.position.y = 200
 
         lights.current = [dirLight, ambientLight]
         scene.current.background = new Color(...rgbToThreeColor(rgbBackground))
@@ -111,7 +125,7 @@ const DisplacementSphere = props => {
     useEffect(() => {
         const { width, height } = windowSize
 
-        const adjustedHeight = height + height * 0.3
+        const adjustedHeight = height + height * 0.4
         renderer.current.setSize(width, adjustedHeight)
         camera.current.aspect = width / adjustedHeight
         camera.current.updateProjectionMatrix()
