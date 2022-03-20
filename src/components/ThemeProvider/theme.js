@@ -101,11 +101,11 @@ const tokensMobileSmall = {
 // Tokens that change based on theme
 const dark = {
     themeId: 'dark',
-    rgbBackground: '17 17 17',
-    rgbBackgroundLight: '26 26 26',
-    rgbPrimary: '0 229 255',
-    rgbAccent: '0 229 255',
-    rgbText: '255 255 255',
+    rgbBackground: '0 0 10',
+    rgbBackgroundLight: '26 26 260',
+    rgbPrimary: '48 63 209',
+    rgbAccent: '0 229 20',
+    rgbText: '242 242 242',
     rgbError: '255 0 60',
     colorTextTitle: 'rgb(var(--rgbText) / 1)',
     colorTextBody: 'rgb(var(--rgbText) / 0.8)',
