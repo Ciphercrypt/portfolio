@@ -28,7 +28,7 @@ import './DisplacementSphere.css'
 
 const DisplacementSphere = props => {
     const theme = useTheme()
-    console.log(theme)
+   // console.log(theme)
     const { rgbBackground, themeId, colorWhite } = theme
     const start = useRef(Date.now())
     const canvasRef = useRef()
@@ -54,7 +54,7 @@ const DisplacementSphere = props => {
         mouse.current = new Vector2(0.8, 0.5)
         renderer.current = new WebGLRenderer({
             canvas: canvasRef.current,
-            antialias: false,
+            antialias: true,
             powerPreference: 'high-performance',
         })
         renderer.current.setSize(innerWidth, innerHeight)

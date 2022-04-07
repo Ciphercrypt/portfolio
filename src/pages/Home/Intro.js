@@ -47,7 +47,9 @@ function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) 
     }, [theme.themeId, prevTheme])
 
     return (
-        <Section
+        <>
+          
+           <Section
             className="intro"
             as="section"
             ref={sectionRef}
@@ -56,6 +58,7 @@ function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) 
             tabIndex={-1}
             {...rest}
         >
+
             <Transition
                 key={theme.themeId}
                 appear={!prerender}
@@ -64,6 +67,7 @@ function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) 
                 onEnter={reflow}
             >
                 {status => (
+                    
                     <Fragment>
                         {!prerender && (
                             <Suspense fallback={null}>
@@ -190,10 +194,15 @@ function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) 
                                 <ArrowDown aria-hidden />
                             </div>
                         )}
+                        
                     </Fragment>
+                  
                 )}
             </Transition>
         </Section>
+        
+        </>
+   
     )
 }
 

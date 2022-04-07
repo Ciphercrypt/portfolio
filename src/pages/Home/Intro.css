@@ -507,3 +507,10 @@
 .icon-button:hover .icon-google-plus {
 	color: white;
 }
+
+
+.mybg-events {
+  background: url("http://s3.amazonaws.com/enactus/assets/enactus-org/wp-content/uploads/2017/09/28153913/EnactusWC_2017_KPMG_Day3_ChampionIndia_004.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+}

@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
-import { Helmet } from 'react-helmet'
 import Intro from 'pages/Home/Intro'
 import Profile from 'pages/Home/Profile'
 import ProjectSummary from 'pages/Home/ProjectSummary'
+import { Helmet } from 'react-helmet'
 import Footer from 'components/Footer'
 import { usePrefersReducedMotion, useRouteTransition } from 'hooks'
 import { useLocation } from 'react-router-dom'
@@ -23,8 +23,8 @@ import tm_1_ph from 'assets/tm1_blurr.png'
 import tm_2 from 'assets/tm2.png'
 import tm_2_ph from 'assets/tm2_blurr.png'
 
-import supreme_1 from 'assets/supreme_1.jpeg'
-import supreme_1_ph from 'assets/supreme_1_blur.png'
+import supreme_1 from 'assets/supreme_1_blur.jpeg'
+import supreme_1_ph from 'assets/supreme_1.jpg'
 
 import Uses from 'pages/Uses/index'
 
@@ -32,6 +32,7 @@ import Uses from 'pages/Uses/index'
 import './index.css'
 
 const disciplines = ['', '']
+const br1=<br />
 
 const Home = () => {
     const { status } = useRouteTransition()
@@ -43,8 +44,7 @@ const Home = () => {
     const projectOne = useRef()
     const projectTwo = useRef()
     const projectThree = useRef()
-    const projectFour = useRef()
-    const projectFive = useRef()
+   
     const details = useRef()
     const prefersReducedMotion = usePrefersReducedMotion()
 
@@ -54,8 +54,7 @@ const Home = () => {
             projectOne,
             projectTwo,
             projectThree,
-            projectFour,
-            projectFive,
+          
             details,
         ]
 
@@ -192,7 +191,9 @@ const Home = () => {
                 visible={visibleSections.includes(projectOne.current)}
                 index={1}
                 title="Billiard Playing AI Agent"
-                description="An AI agent which uses genetic algorithm to play complex classic 8-ball pool game!"
+                description1={`⦿ An Artificial agent made with genetic algorithm in order to search through vast solution space. .  `}
+                description2="⦿ Capable of Finding one solution of the many optimal solutions based on previous moves "
+                description3="⦿ Difficulty of algorithm can be changed by changing the number of generations algorithm go through in order to find optimal solution."
                 buttonText="View Project on GitHub"
                 buttonLink="https://github.com/Ciphercrypt/Billiards-playing-AI-agent"
                 model={{
@@ -213,23 +214,20 @@ const Home = () => {
                 sectionRef={projectTwo}
                 visible={visibleSections.includes(projectTwo.current)}
                 index={2}
-                title="OGram"
-                description="The Telegram Clone made using flutter and dart having a feature like end to end conversation !"
-                buttonText="View Project on GitHub"
-                buttonLink="#"
+                title="Greenit: Fullstack reddit clone with MERN stack"
+                description1={`⦿ The full stack reddit website clone made with mern and cloudinary database. `}
+                description2="⦿ Contain all the features such as posting , commenting , upvoting."
+                description3="⦿ Famous reddit karma system implemented as it is."
+                buttonText="View Project on GitHub"      
+                buttonLink="https://github.com/Ciphercrypt/Greennit"
                 model={{
-                    type: 'phone',
-                    alt: 'GarrioGram',
+                    type: 'laptop1',
+                    alt: '',
                     textures: [
                         {
-                            src: tm_1,
-                            srcSet: `${tm_1} 254w, ${tm_1} 508w`,
-                            placeholder: tm_1_ph,
-                        },
-                        {
-                            src: tm_2,
-                            srcSet: `${tm_2} 254w, ${tm_2} 508w`,
-                            placeholder: tm_2_ph,
+                            src: ganges2,
+                            srcSet: `${ganges2} 980w, ${ganges2} 1376w`,
+                            placeholder: ganges2,
                         },
                     ],
                 }}
@@ -239,13 +237,15 @@ const Home = () => {
                 sectionRef={projectThree}
                 visible={visibleSections.includes(projectThree.current)}
                 index={3}
-                title="DUDHAI"
-                description="The Complete E-commerce site specifically designed for rural milk vendors to directly trade with customers!"
-                buttonText="View Project on GitHub"
-                buttonLink="https://github.com/alensaito1/fubuki"
+                title="Sarcasm detection using Deep Learning"
+                description1={`⦿ A ML model which detects sarcasm in redddit comments using artificial neural network.`}
+                description2="⦿ Multiple aproaches like logistic regression , LSTM and CNN are used."
+                description3="⦿ Concluded that LSTM works better in this case."
+                buttonText="View Project on GitHub"         
+                buttonLink="https://github.com/Ciphercrypt/Reddit-comments-sarcasm-detection-using-deep-learning"
                 model={{
                     type: 'laptop',
-                    alt: 'Fubuki',
+                    alt: 'Sarcasm detection',
                     textures: [
                         {
                             src: supreme_1,
@@ -255,7 +255,7 @@ const Home = () => {
                     ],
                 }}
             />
-            <ProjectSummary
+            {/* <ProjectSummary
                 id="project-4"
                 alternate
                 sectionRef={projectFour}
@@ -302,7 +302,7 @@ const Home = () => {
                         },
                     ],
                 }}
-            />
+            /> */}
             <Uses/>
            
             <Footer />

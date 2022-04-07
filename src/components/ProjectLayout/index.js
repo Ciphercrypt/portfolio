@@ -14,7 +14,10 @@ const initDelay = 300
 
 export function ProjectHeader({
     title,
-    description,
+    description1,
+    description2,
+    description3,
+
     linkLabel = 'Visit website',
     url,
     roles,
@@ -42,7 +45,23 @@ export function ProjectHeader({
                         })}
                         size="xl"
                     >
-                        {description}
+                        {description1}
+                    </Text>
+                    <Text
+                        className={classNames('project__description', {
+                            'project__description--entered': !prerender,
+                        })}
+                        size="xl"
+                    >
+                        {description2}
+                    </Text>
+                    <Text
+                        className={classNames('project__description', {
+                            'project__description--entered': !prerender,
+                        })}
+                        size="xl"
+                    >
+                        {description3}
                     </Text>
                     {!!url && (
                         <Button

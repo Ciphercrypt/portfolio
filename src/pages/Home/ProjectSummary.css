@@ -99,9 +99,11 @@
   justify-content: center;
   height: 100%;
   width: 100%;
+  margin-left: -120px;
 }
 
 .project-summary__model {
+  
   --width: 180%;
   --aspectRatio: 10 / 12;
 
@@ -128,6 +130,40 @@
     }
   }
 }
+
+
+
+
+.project-summary__model1 {
+  
+  --width: 180%;
+  --aspectRatio: 10 / 12;
+
+  min-width: var(--width);
+  padding-bottom: calc(var(--aspectRatio) * var(--width));
+}
+
+.project-summary__model1--laptop1 {
+  top: 6%;
+  left: -19%;
+
+  @media (--mediaDesktop) {
+    & {
+      --width: 180%;
+    }
+  }
+
+  @media (--mediaTablet) {
+    & {
+      --width: 140%;
+
+      top: 10%;
+      left: 0;
+    }
+  }
+}
+
+
 
 .project-summary__model--phone {
   --width: 116%;

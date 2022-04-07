@@ -21,7 +21,9 @@ const ProjectSummary = ({
     sectionRef,
     index,
     title,
-    description,
+    description1,
+    description2,
+    description3,
     model,
     buttonText,
     buttonLink,
@@ -105,7 +107,21 @@ const ProjectSummary = ({
                     `project-summary__description--${status}`
                 )}
             >
-                {description}
+                {description1}
+            </Text> <Text
+                className={classNames(
+                    'project-summary__description',
+                    `project-summary__description--${status}`
+                )}
+            >
+                {description2}
+            </Text> <Text
+                className={classNames(
+                    'project-summary__description',
+                    `project-summary__description--${status}`
+                )}
+            >
+                {description3}
             </Text>
             <div
                 className={classNames(
@@ -157,6 +173,45 @@ const ProjectSummary = ({
                     />
                 </Fragment>
             )}
+
+
+{model.type === 'laptop1' && (
+                <Fragment>
+                     <KatakanaProject
+                        style={{ '--opacity': svgOpacity }}
+                        className={classNames(
+                            'project-summary__svg',
+                            'project-summary__svg--phone',
+                            `project-summary__svg--${status}`,
+                            {
+                                'project-summary__svg--light': theme.themeId === 'light',
+                            }
+                        )}
+                    />
+                    
+                    <Model
+                        className={classNames(
+                            'project-summary__model1',
+                            'project-summary__model--laptop1'
+                        )}
+                        alt={model.alt}
+                        cameraPosition={{ x: 0, y: 0, z: 8 }}
+                        showDelay={800}
+                        show={isVisible(status)}
+                        models={[
+                            {
+                                ...deviceModels.laptop,
+                                texture: {
+                                    ...model.textures[0],
+                                    sizes: laptopSizes,
+                                },
+                            },
+                        ]}
+                    />
+                </Fragment>
+            )}
+
+
             {model.type === 'phone' && (
                 <Fragment>
                     <KatakanaProject
