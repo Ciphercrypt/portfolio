@@ -23,12 +23,7 @@ const Uses = () => {
         <Fragment>
             
             <ProjectContainer className="uses">
-                <ProjectBackground
-                    src={usesBackground}
-                    placeholder={usesBackgroundPlaceholder}
-                    opacity={0.7}
-                    entered={!prerender}
-                />
+                
              
                 <ProjectSection first className="uses__section">
                     <ProjectSectionContent>
