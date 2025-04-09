@@ -1,91 +1,103 @@
-@custom-media --mediaDesktop (max-width: 2080px);
-@custom-media --mediaLaptop (max-width: 1680px);
-@custom-media --mediaTablet (max-width: 1024px);
-@custom-media --mediaMobile (max-width: 696px);
-@custom-media --mediaMobileS (max-width: 400px);
-@custom-media --mediaUseMotion (prefers-reduced-motion: no-preference);
-@custom-media --mediaReduceMotion (prefers-reduced-motion: reduce);
+:root {
+  --bg: #0a0b14;
+  --bg-card: #0f1026;
+  --bg-hover: #141530;
+  --border: rgba(100, 255, 218, 0.08);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --text: #ccd6f6;
+  --text-muted: #8892a4;
+  --text-light: #a8b2d8;
+  --accent: #64ffda;
+  --accent-tint: rgba(100, 255, 218, 0.07);
+  --accent-tint-hover: rgba(100, 255, 218, 0.15);
+  --purple: #c084fc;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  --nav-height: 70px;
+  --max-width: 1000px;
+  --section-pad: 100px;
+  --ease: cubic-bezier(0.65, 0.05, 0.36, 1);
+  --trans: 0.25s var(--ease);
+}
 
 body {
-  font-family: var(--fontStack);
-  font-weight: var(--fontWeightRegular);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  background: rgb(var(--rgbBackground));
-  color: var(--colorTextBody);
-  border: 0;
-  margin: 0;
-  width: 100vw;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
   overflow-x: hidden;
 }
 
 ::selection {
-  background: rgb(var(--rgbPrimary) / 0.3);
-  color: var(--colorTextTitle);
+  background: rgba(100, 255, 218, 0.25);
+  color: var(--accent);
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
-.app {
-  width: 100%;
-  position: relative;
-  background: rgb(var(--rgbBackground));
-  transition: background var(--durationM) ease;
-  outline: none;
-  display: grid;
-  grid-template: 100% / 100%;
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
 }
 
-.app__page {
+.section {
+  padding: var(--section-pad) 0;
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.section-heading h2 {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.section-heading-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border-subtle);
+  max-width: 280px;
+}
+
+.reveal {
   opacity: 0;
-  grid-area: 1 / 1;
-  transition: opacity var(--durationS) ease;
-  min-height: 100vh;
+  transform: translateY(24px);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
 }
 
-.app__page--exiting,
-.app__page--entering {
-  opacity: 0;
-}
-
-.app__page--entered {
-  transition-duration: var(--durationL);
-  transition-delay: var(--durationXS);
+.reveal.visible {
   opacity: 1;
+  transform: none;
 }
 
-.skip-to-main {
-  color: rgb(var(--rgbBackground));
-  z-index: 128;
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
 
-  &:focus {
-    padding: var(--spaceS) var(--spaceM);
-    position: fixed;
-    top: var(--spaceM);
-    left: var(--spaceM);
-    text-decoration: none;
-    font-weight: var(--fontWeightMedium);
-    line-height: 1;
-    box-shadow: 0 0 0 4px rgb(var(--rgbBackground)), 0 0 0 8px rgb(var(--rgbText));
-    outline: none;
-  }
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(var(--rgbPrimary));
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
-    z-index: -1;
-  }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: none; }
 }
