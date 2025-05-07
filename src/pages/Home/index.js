@@ -11,7 +11,7 @@ const TYPEWRITER_TEXTS = [
     'distributed systems',
 ]
 
-function useTypewriter(texts, speed = 80) {
+function useTypewriter(texts, speed = 90) {
     const [display, setDisplay] = useState('')
     const [idx, setIdx] = useState(0)
     const [charIdx, setCharIdx] = useState(0)
