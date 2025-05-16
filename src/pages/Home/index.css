@@ -252,7 +252,7 @@
   font-size: 13px;
   color: var(--text-muted);
   text-align: left;
-  padding: 12px 20px;
+  padding: 12px 24px;
   border-left: 2px solid transparent;
   margin-left: -2px;
   transition: color var(--trans), border-color var(--trans), background var(--trans);
