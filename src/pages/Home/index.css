@@ -96,7 +96,7 @@
 }
 
 .hero__desc {
-  max-width: 560px;
+  max-width: 540px;
   color: var(--text-muted);
   font-size: 18px;
   line-height: 1.7;
