@@ -28,7 +28,7 @@
   font-weight: 500;
   color: var(--accent);
   margin-right: auto;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   transition: opacity var(--trans);
 }
 
