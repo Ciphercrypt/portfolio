@@ -215,7 +215,7 @@
   padding: 16px 8px;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .stat__num {
