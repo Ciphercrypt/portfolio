@@ -57,7 +57,7 @@ const EXPERIENCE = [
     {
         company: 'Bank of New York (BNY)',
         url: 'https://www.bny.com',
-        role: 'Full-Stack Software Developer II',
+        role: 'Full-Stack Software Developer — II',
         period: 'Jul 2023 – Jan 2026',
         location: 'Pune, India',
         bullets: [
