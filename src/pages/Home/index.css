@@ -45,7 +45,7 @@
   transition: background var(--trans);
 }
 
-.chip:hover { background: var(--accent-tint-hover); }
+.chip:hover { background: var(--accent-tint-hover); color: var(--accent); }
 
 .chip--small {
   padding: 3px 10px;
