@@ -41,7 +41,7 @@ export const socialLinks = [
     },
     {
         label: 'Gmail',
-        url: 'mailto:avimohite2019@gmail.com',
+        url: 'mailto:avishkar.mohite.eng@gmail.com',
         icon: 'gmail',
     },
 ]
