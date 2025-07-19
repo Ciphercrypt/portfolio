@@ -105,11 +105,11 @@ const dark = {
     rgbBackgroundLight: '26 26 260',
     rgbPrimary: '0 212 255',
     rgbAccent: '124 58 237',
-    rgbText: '242 242 242',
-    rgbError: '255 0 60',
+    rgbText: '226 232 240',
+    rgbError: '255 59 59',
     colorTextTitle: 'rgb(var(--rgbText) / 1)',
-    colorTextBody: 'rgb(var(--rgbText) / 0.8)',
-    colorTextLight: 'rgb(var(--rgbText) / 0.6)',
+    colorTextBody: 'rgb(var(--rgbText) / 0.82)',
+    colorTextLight: 'rgb(var(--rgbText) / 0.55)',
 }
 
 const light = {
@@ -122,7 +122,7 @@ const light = {
     rgbError: '210 14 60',
     colorTextTitle: 'rgb(var(--rgbText) / 1)',
     colorTextBody: 'rgb(var(--rgbText) / 0.7)',
-    colorTextLight: 'rgb(var(--rgbText) / 0.6)',
+    colorTextLight: 'rgb(var(--rgbText) / 0.55)',
 }
 
 export const tokens = {
