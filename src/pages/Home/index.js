@@ -133,7 +133,7 @@ const SKILLS = [
     },
     {
         category: 'Infrastructure',
-        items: ['Docker', 'Kubernetes', 'AWS', 'GitLab CI/CD', 'SonarQube', 'Splunk'],
+        items: ['Docker', 'Kubernetes', 'AWS', 'S3', 'GitLab CI/CD', 'SonarQube', 'Splunk'],
     },
     {
         category: 'Databases',
