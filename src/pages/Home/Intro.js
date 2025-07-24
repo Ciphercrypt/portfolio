@@ -129,10 +129,12 @@ function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) 
                                     })}
                                     component="span"
                                 >
-                                                                  <a href="mailto:avimohite2019@gmail.com" class="icon-button facebook" rel="noreferrer" target="_blank"> <Icon icon="dashicons:email-alt" /></a>                                                                        
-                                                                    <a href="https://github.com/ciphercrypt" target="_blank" rel="noreferrer" class="icon-button facebook"> <FontAwesomeIcon icon={faGithub}/></a>   
-                                                                   <a href="https://www.linkedin.com/in/avishkar-mohite/" rel="noreferrer" class="icon-button facebook" target="_blank"> <FontAwesomeIcon icon={faLinkedin}/></a>  
-                                                                   <a href="https://www.codechef.com/users/ciphercrypt"  rel="noreferrer"class="icon-button facebook" target="_blank"> <Icon icon="simple-icons:codechef" /></a>   
+                                        <div className="intro__social-links">
+                                            <a href="mailto:avimohite2019@gmail.com" className="icon-button" rel="noreferrer" target="_blank" aria-label="Email"><Icon icon="dashicons:email-alt" /></a>
+                                            <a href="https://github.com/ciphercrypt" target="_blank" rel="noreferrer" className="icon-button" aria-label="GitHub"><FontAwesomeIcon icon={faGithub} /></a>
+                                            <a href="https://www.linkedin.com/in/avishkar-mohite/" rel="noreferrer" className="icon-button" target="_blank" aria-label="LinkedIn"><FontAwesomeIcon icon={faLinkedin} /></a>
+                                            <a href="https://www.codechef.com/users/ciphercrypt" rel="noreferrer" className="icon-button" target="_blank" aria-label="CodeChef"><Icon icon="simple-icons:codechef" /></a>
+                                        </div>   
                                                                  {/*  <a href="#3" class="icon-button facebook" target="_blank"> <Icon icon="simple-icons:codeforces" /><span></span></a>   */}
 
 
