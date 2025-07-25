@@ -347,7 +347,7 @@
 .project-card__content {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 40px;
   transition: border-color var(--trans), transform var(--trans);
 }
