@@ -103,7 +103,7 @@ function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) 
                                         )}
                                         style={{ '--delay': tokens.base.durationXS }}
                                     >
-                                      SOFTWARE  DEVELOPER
+                                      SOFTWARE ENGINEER
                                      
                  
                                     </span>
