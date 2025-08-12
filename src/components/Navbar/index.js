@@ -12,7 +12,7 @@ const NAV_LINKS = [
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false)
     const [open, setOpen] = useState(false)
-    const [active, setActive] = useState('')
+    const [active, setActive] = useState('about')
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 20)
