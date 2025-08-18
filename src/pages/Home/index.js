@@ -7,7 +7,7 @@ const TYPEWRITER_TEXTS = [
     'low-latency systems',
     'event-driven architectures',
     'AI platform infra',
-    'things that run at 2am',
+    'systems that run at 2am',
     'distributed systems',
 ]
 
