@@ -51,25 +51,13 @@ const ProfileText = ({ status, titleId }) => (
             )}
             size="l"
         >
-           I am Software Developer  in Penultimate Year of Computer Engineering 
-           at @ 
-           <Link  href="https://vjti.ac.in/" target="_blank">
-           Veermata Jijabai Technological Institute (VJTI),Mumbai . 
-            
-        </Link>
-        {' '}I live most of my life on{' '}  
-        <Link  href="https://auth.geeksforgeeks.org/user/aviciphercrypt/practice/" target="_blank">
-        GeeksForGeeks
-            
-        </Link> ,
-        <Link  href="https://leetcode.com/ciphercrypt/" target="_blank">
-        LeetCode
-            
-        </Link> and {' '}
-        <Link  href="https://github.com/Ciphercrypt/" target="_blank">
-         Github
-            
-        </Link>. I also work in full stack web application development with recent focus on flutter development.  
+            I'm a Software Engineer specialising in high-performance backend systems.
+            Previously at{' '}
+            <Link href="https://www.bny.com/" target="_blank">
+                BNY
+            </Link>
+            {' '}where I led design of ultra-low-latency microservices for post-trade and
+            liquidity processing systems, handling millions of financial transactions daily.
 
         </Text>
         <Text
