@@ -493,7 +493,7 @@
 
 .skill-group__title {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 11px;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.1em;
