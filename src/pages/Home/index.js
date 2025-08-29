@@ -125,7 +125,7 @@ const SKILLS = [
     },
     {
         category: 'Backend',
-        items: ['Spring Boot', 'Spring WebFlux', 'Kafka', 'Redis', 'RabbitMQ', 'Hazelcast', 'Hibernate / JPA', 'REST APIs'],
+        items: ['Spring Boot', 'Spring WebFlux', 'Kafka', 'Redis', 'RabbitMQ', 'Hazelcast', 'Hibernate / JPA', 'Spring Security', 'REST APIs'],
     },
     {
         category: 'Frontend',
