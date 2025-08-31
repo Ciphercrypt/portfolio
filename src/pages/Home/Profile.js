@@ -67,7 +67,12 @@ const ProfileText = ({ status, titleId }) => (
             )}
             size="l"
         >
-            In my spare time I watch movies or surf on Reddit .I'm more nerdier than you , so don't hesitate a bit to message me for new projects or for random discussion on anything in the world.
+            B.Tech CSE graduate from{' '}
+            <Link href="https://vjti.ac.in/" target="_blank">
+                VJTI Mumbai
+            </Link>
+            {' '}(CGPA 9.4 final year), competitive programmer with 1200+ problems solved and
+            a peak CodeChef rating of 2003.
         </Text>
     </Fragment>
 )
