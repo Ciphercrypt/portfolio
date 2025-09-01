@@ -105,7 +105,7 @@ const Profile = ({ id, visible, sectionRef }) => {
                                 href="/portfolio/contact"
                                 icon="send"
                             >
-                                Send me a message
+                                Get in touch
                             </Button>
                         </div>
                         <div className="profile__column">
