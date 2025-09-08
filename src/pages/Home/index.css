@@ -596,7 +596,7 @@
 }
 
 @media (max-width: 768px) {
-  :root { --section-pad: 64px; }
+  :root { --section-pad: 60px; }
 
   .about__grid {
     grid-template-columns: 1fr;
