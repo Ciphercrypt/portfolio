@@ -10,7 +10,7 @@ const Footer = () => (
                 </a>
             </p>
             <p className="footer__sub">
-                avishkar.mohite.eng@gmail.com
+                avishkar.mohite.eng@gmail.com · Pune, India
             </p>
         </div>
     </footer>
