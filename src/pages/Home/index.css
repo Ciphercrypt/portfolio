@@ -539,7 +539,7 @@
 
 .achievement:hover { border-color: var(--border); }
 
-.achievement__icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+.achievement__icon { font-size: 20px; flex-shrink: 0; margin-top: 4px; }
 
 .achievement__text {
   font-size: 14px;
