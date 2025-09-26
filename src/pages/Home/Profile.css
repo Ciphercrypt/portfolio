@@ -178,3 +178,28 @@
 .profile__button--entered {
   opacity: 1;
 }
+
+/* Experience Timeline */
+.profile__experience {
+  width: 100%;
+  margin-top: var(--space2XL);
+  margin-bottom: var(--spaceXL);
+  opacity: 0;
+  transition: opacity var(--durationXL) ease calc(var(--durationL) + 200ms);
+}
+
+.profile__experience--entered {
+  opacity: 1;
+  transform: none;
+}
+
+.profile__experience-heading {
+  font-size: var(--fontSizeBodyL);
+  font-weight: var(--fontWeightMedium);
+  color: rgb(var(--rgbPrimary));
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 var(--spaceXL) 0;
+  padding-bottom: var(--spaceS);
+  border-bottom: 1px solid rgb(var(--rgbPrimary) / 0.2);
+}
