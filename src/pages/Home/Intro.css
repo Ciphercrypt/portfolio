@@ -48,7 +48,7 @@
   text-transform: uppercase;
   font-size: calc((24 / 16) * 1rem);
   letter-spacing: 0.3em;
-  color: var(--colorTextBody);
+  color: rgb(var(--rgbPrimary));
   margin-bottom: var(--space2XL);
   margin-top: 0;
   font-weight: var(--fontWeightMedium);
@@ -257,7 +257,7 @@
 .intro__title-line {
   content: '';
   height: 2px;
-  background: rgb(var(--rgbText) / 0.3);
+  background: rgb(var(--rgbPrimary) / 0.4);
   width: 120%;
   display: flex;
   margin-left: 20px;
