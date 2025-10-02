@@ -242,3 +242,63 @@
   margin-left: calc(var(--spaceXL) * -1);
   margin-top: 4px;
 }
+
+.profile__exp-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile__exp-role {
+  font-size: var(--fontSizeBodyM);
+  font-weight: var(--fontWeightMedium);
+  color: var(--colorTextTitle);
+  line-height: 1.3;
+}
+
+.profile__exp-company-period {
+  display: flex;
+  align-items: center;
+  gap: var(--spaceS);
+  flex-wrap: wrap;
+}
+
+.profile__exp-company {
+  font-size: var(--fontSizeBodyS);
+  color: rgb(var(--rgbPrimary));
+  font-weight: var(--fontWeightMedium);
+}
+
+.profile__exp-period {
+  font-size: var(--fontSizeBodyXS);
+  color: var(--colorTextLight);
+  background: rgb(var(--rgbText) / 0.06);
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.profile__exp-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spaceS);
+}
+
+.profile__exp-highlights li {
+  font-size: var(--fontSizeBodyS);
+  color: var(--colorTextBody);
+  line-height: 1.6;
+  position: relative;
+  padding-left: var(--spaceL);
+}
+
+.profile__exp-highlights li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: rgb(var(--rgbPrimary) / 0.7);
+  font-size: 0.75em;
+  top: 3px;
+}
