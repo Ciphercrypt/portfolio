@@ -190,15 +190,15 @@ const Home = () => {
                 sectionRef={projectOne}
                 visible={visibleSections.includes(projectOne.current)}
                 index={1}
-                title="Billiard Playing AI Agent"
-                description1={`⦿ An Artificial agent made with genetic algorithm in order to search through vast solution space. .  `}
-                description2="⦿ Capable of Finding one solution of the many optimal solutions based on previous moves "
-                description3="⦿ Difficulty of algorithm can be changed by changing the number of generations algorithm go through in order to find optimal solution."
-                buttonText="View Project on GitHub"
-                buttonLink="https://github.com/Ciphercrypt/Billiards-playing-AI-agent"
+                title="LettuceCache — Semantic Cache for LLMs"
+                description1="⦿ Context-aware semantic caching layer between client apps and LLMs — reduces API costs and latency with a two-tier Redis L1 + FAISS IVF+PQ L2 architecture."
+                description2="⦿ Context signature using SHA-256(intent:domain:scope) prevents false cache hits across different conversations; cache hits served in <30ms vs 500–2000ms LLM fallback."
+                description3="⦿ Admission control with scoring: 0.60×cosine_sim + 0.25×context_sig + 0.15×domain ≥ 0.85 threshold. Deployed on Kubernetes with Docker Compose."
+                buttonText="View on GitHub"
+                buttonLink="https://github.com/Ciphercrypt/LettuceCache"
                 model={{
                     type: 'laptop',
-                    alt: 'Billiard Playing AI Agent',
+                    alt: 'LettuceCache semantic caching layer',
                     textures: [
                         {
                             src: bill_1,
