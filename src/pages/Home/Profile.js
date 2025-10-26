@@ -117,7 +117,7 @@ const Profile = ({ id, visible, sectionRef }) => {
                                     placeholder={ProfileImgPlaceholder}
                                     srcSet={`${ProfileImg} 480w, ${ProfileImg} 960w`}
                                     sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
-                                    alt="profile image"
+                                    alt="Avishkar Mohite"
                                 />
                                 <KatakanaProfile
                                     className={classNames(
