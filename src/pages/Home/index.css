@@ -336,8 +336,8 @@
 .projects__featured {
   display: flex;
   flex-direction: column;
-  gap: 80px;
-  margin-bottom: 80px;
+  gap: 64px;
+  margin-bottom: 64px;
 }
 
 .project-card--featured {
