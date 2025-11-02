@@ -16,6 +16,19 @@ import Text from 'components/Text'
 import Link from 'components/Link'
 import './Profile.css'
 
+const experiences = [
+    {
+        role: 'Full-Stack Software Developer — 2',
+        company: 'Bank of New York (BNY)',
+        period: 'Jul 2023 – Jan 2026',
+        highlights: [
+            'Led 9-member team building ultra-low-latency event-driven Java microservices (<300ms)',
+            'Built high-throughput cash projection platform processing 2M+ trades every 15 minutes',
+            'Optimised data ingestion for 10M+ daily wire/SWIFT transactions, reducing failures by 30%',
+        ],
+    },
+]
+
 const ProfileText = ({ status, titleId }) => (
     <Fragment>
         <Heading
