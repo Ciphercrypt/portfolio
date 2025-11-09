@@ -87,6 +87,33 @@ const ProfileText = ({ status, titleId }) => (
             {' '}(CGPA 9.4 final year), competitive programmer with 1200+ problems solved and
             a peak CodeChef rating of 2003.
         </Text>
+        <div
+            className={classNames(
+                'profile__experience',
+                `profile__experience--${status}`
+            )}
+        >
+            <h3 className="profile__experience-heading">Experience</h3>
+            {experiences.map((exp, i) => (
+                <div key={i} className="profile__exp-item">
+                    <div className="profile__exp-header">
+                        <div className="profile__exp-dot" />
+                        <div className="profile__exp-meta">
+                            <span className="profile__exp-role">{exp.role}</span>
+                            <span className="profile__exp-company-period">
+                                <span className="profile__exp-company">{exp.company}</span>
+                                <span className="profile__exp-period">{exp.period}</span>
+                            </span>
+                        </div>
+                    </div>
+                    <ul className="profile__exp-highlights">
+                        {exp.highlights.map((h, j) => (
+                            <li key={j}>{h}</li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </div>
     </Fragment>
 )
 
