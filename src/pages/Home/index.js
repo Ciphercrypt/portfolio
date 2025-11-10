@@ -237,20 +237,20 @@ const Home = () => {
                 sectionRef={projectThree}
                 visible={visibleSections.includes(projectThree.current)}
                 index={3}
-                title="Sarcasm detection using Deep Learning"
-                description1={`⦿ A ML model which detects sarcasm in redddit comments using artificial neural network.`}
-                description2="⦿ Multiple aproaches like logistic regression , LSTM and CNN are used."
-                description3="⦿ Concluded that LSTM works better in this case."
-                buttonText="View Project on GitHub"         
-                buttonLink="https://github.com/Ciphercrypt/Reddit-comments-sarcasm-detection-using-deep-learning"
+                title="Quasar — Smart City Traffic Management"
+                description1="⦿ Full-stack smart city traffic surveillance system integrating a Python ML pipeline with a MERN stack for real-time congestion detection and analysis."
+                description2="⦿ Engineered intelligent vehicle tracking using YOLOv5 achieving 90% accuracy in traffic flow optimisation and predictive congestion analysis."
+                description3="⦿ Winner of Quasar Hackathon 2023. Deployed with React frontend, Node.js/Express backend, and MongoDB for event storage."
+                buttonText="View on GitHub"
+                buttonLink="https://github.com/Ciphercrypt/quassar"
                 model={{
                     type: 'laptop',
-                    alt: 'Sarcasm detection',
+                    alt: 'Quasar smart traffic management',
                     textures: [
                         {
-                            src: supreme_1,
-                            srcSet: `${supreme_1} 800w, ${supreme_1} 1440w`,
-                            placeholder: supreme_1_ph,
+                            src: tm_1,
+                            srcSet: `${tm_1} 980w, ${tm_1} 1376w`,
+                            placeholder: tm_1_ph,
                         },
                     ],
                 }}
