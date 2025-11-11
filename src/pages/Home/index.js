@@ -44,7 +44,7 @@ const Home = () => {
     const projectOne = useRef()
     const projectTwo = useRef()
     const projectThree = useRef()
-   
+    const projectFour = useRef()
     const details = useRef()
     const prefersReducedMotion = usePrefersReducedMotion()
 
@@ -54,7 +54,7 @@ const Home = () => {
             projectOne,
             projectTwo,
             projectThree,
-          
+            projectFour,
             details,
         ]
 
@@ -251,6 +251,30 @@ const Home = () => {
                             src: tm_1,
                             srcSet: `${tm_1} 980w, ${tm_1} 1376w`,
                             placeholder: tm_1_ph,
+                        },
+                    ],
+                }}
+            />
+            <ProjectSummary
+                id="project-4"
+                alternate
+                sectionRef={projectFour}
+                visible={visibleSections.includes(projectFour.current)}
+                index={4}
+                title="Stree — AI Chatbot for Rural Entrepreneurs"
+                description1="⦿ Finalist at Morgan Stanley Code-to-Give Hackathon. Multi-channel conversational AI platform for women entrepreneurs in rural India."
+                description2="⦿ Supports web bot, telephony bot for feature-phone users, 3D avatar interface, and social media bot — enabling access without smartphones."
+                description3="⦿ Built with Dialogflow NLP, Flask backend, and React frontend; FAQ automation, humanoid avatar, and language localisation."
+                buttonText="View on GitHub"
+                buttonLink="https://github.com/Ciphercrypt/MS-code-to-give"
+                model={{
+                    type: 'laptop1',
+                    alt: 'Stree AI chatbot platform',
+                    textures: [
+                        {
+                            src: ganges2,
+                            srcSet: `${ganges2} 980w, ${ganges2} 1376w`,
+                            placeholder: ganges2_placeholder,
                         },
                     ],
                 }}
