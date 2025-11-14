@@ -562,7 +562,7 @@
   font-size: clamp(36px, 6vw, 56px);
   font-weight: 600;
   color: var(--text);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .contact__desc {
