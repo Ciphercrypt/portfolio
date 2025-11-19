@@ -183,7 +183,7 @@
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.45);
 }
 
 .about__image-frame::after {
