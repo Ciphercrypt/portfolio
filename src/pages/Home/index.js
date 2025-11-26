@@ -157,19 +157,17 @@ const Home = () => {
     return (
         <div className="home">
             <Helmet>
-                <title>AVISHKAR MOHITE | Developer  </title>
+                <title>Avishkar Mohite | Software Engineer</title>
                 <meta
                     name="description"
-                    content="Meet Avishkar Mohite ,Programmer who design the dreams.."
+                    content="Avishkar Mohite — Software Engineer specialising in low-latency backend systems, AI platform infrastructure, and distributed systems."
                 />
                 <meta
                     name="keywords"
-                    content="avishkar mohite,Aviskar mohite,web development,web developer,fancy resume,best website, best software, software engineer, india,resume online,cv online,android developer,chakan,khed,programmer,programer,mohite,moite,website,avishkar mohite resume, avishkar mohite cv,shelpimpalgaon,pune,developer,devloper,devs.org, avishkar,"
+                    content="avishkar mohite, software engineer, backend engineer, Java, Spring Boot, low-latency systems, microservices, Kafka, distributed systems, VJTI"
                 />
-
-<meta name="robots" content="index, follow" />
-    <meta name="author" content="Avishkar mohite" />
-    <meta name="revisit-after" content="1 days"/>
+                <meta name="robots" content="index, follow" />
+                <meta name="author" content="Avishkar Mohite" />
                 <link rel="prefetch" href={iphone11} as="fetch" crossorigin="" />
                 <link rel="prefetch" href={macbookPro} as="fetch" crossorigin="" />
             </Helmet>
