@@ -12,18 +12,13 @@ import macbookPro from 'assets/macbook-pro.glb'
 
 import bill_1 from 'assets/bill_1.png'
 import bill_1_placeholder from 'assets/bill_1_blur.jpg'
-import ganges1 from 'assets/ganges.jpeg'
-import ganges1_placeholder from 'assets/ganges_blurred.jpg'
 import ganges2 from 'assets/ganges_2.png'
 import ganges2_placeholder from 'assets/ganges_2_blur.png'
 
 import tm_1 from 'assets/tm1.jpg'
 import tm_1_ph from 'assets/tm1_blurr.png'
 
-import tm_2 from 'assets/tm2.png'
-import tm_2_ph from 'assets/tm2_blurr.png'
 
-import supreme_1 from 'assets/supreme_1_blur.jpeg'
 import supreme_1_ph from 'assets/supreme_1.jpg'
 
 import Uses from 'pages/Uses/index'
@@ -32,7 +27,6 @@ import Uses from 'pages/Uses/index'
 import './index.css'
 
 const disciplines = ['', '']
-const br1=<br />
 
 const Home = () => {
     const { status } = useRouteTransition()
