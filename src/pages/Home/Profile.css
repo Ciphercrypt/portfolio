@@ -60,7 +60,8 @@
 }
 
 .profile__column {
-  position: relative;
+  position: sticky;
+  top: 120px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -128,7 +129,8 @@
 }
 
 .profile__image-wrapper {
-  position: relative;
+  position: sticky;
+  top: 120px;
   width: 100%;
 }
 
@@ -205,7 +207,8 @@
 }
 
 .profile__exp-item {
-  position: relative;
+  position: sticky;
+  top: 120px;
   padding-left: var(--spaceXL);
   margin-bottom: var(--space2XL);
 }
@@ -290,7 +293,8 @@
   font-size: var(--fontSizeBodyS);
   color: var(--colorTextBody);
   line-height: 1.6;
-  position: relative;
+  position: sticky;
+  top: 120px;
   padding-left: var(--spaceL);
 }
 
