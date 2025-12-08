@@ -220,7 +220,7 @@
 
 .stat__num {
   display: block;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--accent);
   font-family: var(--mono);
