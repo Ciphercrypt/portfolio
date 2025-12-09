@@ -1,146 +1,180 @@
 import { Fragment } from 'react'
 import {
-    ProjectBackground,
     ProjectContainer,
-  
     ProjectSection,
     ProjectSectionContent,
-  
-    
 } from 'components/ProjectLayout'
-import usesBackground from 'assets/uses-background_gf.gif'
-import usesBackgroundPlaceholder from 'assets/uses-background-placeholder.jpg'
 import prerender from 'utils/prerender'
 import { useScrollRestore } from 'hooks'
 import { Icon } from '@iconify/react'
-
 import './index.css'
+
+const skillCategories = [
+    {
+        label: 'Backend Engineering',
+        icon: 'logos:java',
+        skills: [
+            { name: 'Java 17+', icon: 'logos:java' },
+            { name: 'Spring Boot', icon: 'logos:spring-icon' },
+            { name: 'Microservices', icon: 'carbon:microservices-1' },
+            { name: 'Apache Kafka', icon: 'logos:kafka-icon' },
+            { name: 'Redis', icon: 'logos:redis' },
+            { name: 'RabbitMQ', icon: 'logos:rabbitmq-icon' },
+            { name: 'Spring WebFlux', icon: 'logos:spring-icon' },
+            { name: 'Python', icon: 'logos:python' },
+            { name: 'REST APIs', icon: 'carbon:api' },
+        ],
+    },
+    {
+        label: 'Frontend',
+        icon: 'logos:angular-icon',
+        skills: [
+            { name: 'Angular', icon: 'logos:angular-icon' },
+            { name: 'React', icon: 'logos:react' },
+            { name: 'TypeScript', icon: 'logos:typescript-icon' },
+            { name: 'JavaScript', icon: 'logos:javascript' },
+            { name: 'HTML5', icon: 'vscode-icons:file-type-html' },
+            { name: 'CSS3', icon: 'logos:css-3' },
+        ],
+    },
+    {
+        label: 'DevOps & Cloud',
+        icon: 'logos:docker-icon',
+        skills: [
+            { name: 'Docker', icon: 'logos:docker-icon' },
+            { name: 'Kubernetes', icon: 'logos:kubernetes' },
+            { name: 'AWS', icon: 'logos:aws' },
+            { name: 'GitLab CI/CD', icon: 'logos:gitlab' },
+            { name: 'Git', icon: 'logos:git-icon' },
+            { name: 'SonarQube', icon: 'simple-icons:sonarqube' },
+        ],
+    },
+    {
+        label: 'Databases',
+        icon: 'logos:postgresql',
+        skills: [
+            { name: 'PostgreSQL', icon: 'logos:postgresql' },
+            { name: 'MySQL', icon: 'logos:mysql' },
+            { name: 'MongoDB', icon: 'logos:mongodb-icon' },
+            { name: 'SQL Tuning', icon: 'carbon:sql' },
+        ],
+    },
+    {
+        label: 'Low-Latency & JVM',
+        icon: 'carbon:chip',
+        skills: [
+            { name: 'Multithreading', icon: 'carbon:chart-parallel' },
+            { name: 'GC Tuning', icon: 'carbon:settings-adjust' },
+            { name: 'Reactive Programming', icon: 'carbon:flow' },
+            { name: 'Non-Blocking I/O', icon: 'carbon:network-4' },
+            { name: 'Lock-Free Structures', icon: 'carbon:locked' },
+            { name: 'Latency Profiling', icon: 'carbon:timer' },
+        ],
+    },
+    {
+        label: 'AI / ML',
+        icon: 'eos-icons:ai',
+        skills: [
+            { name: 'LLM Systems', icon: 'eos-icons:ai' },
+            { name: 'FAISS', icon: 'carbon:data-structured' },
+            { name: 'YOLOv5', icon: 'carbon:machine-learning' },
+            { name: 'TensorFlow', icon: 'logos:tensorflow' },
+            { name: 'Dialogflow', icon: 'logos:google-cloud' },
+            { name: 'C++', icon: 'vscode-icons:file-type-cpp2' },
+        ],
+    },
+]
 
 const Uses = () => {
     useScrollRestore()
 
     return (
         <Fragment>
-            
             <ProjectContainer className="uses">
-                
-             
                 <ProjectSection first className="uses__section">
                     <ProjectSectionContent>
-                       
-                            
-                               
-                                    
-                                <section>
-        <div class="skills container">
-            <h2>Skills</h2>
-            <ul>
-                
-                <li class="skills-card">
-                    <h4>C++</h4>
-                    <span class="iconsize"><Icon icon="vscode-icons:file-type-cpp2" />  </span> <br></br>
-                    <Icon icon="emojione:glowing-star " /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> 
+                        <section className="skills">
+                            <div className="skills__header">
+                                <h2 className="skills__title">Technical Skills</h2>
+                                <p className="skills__subtitle">
+                                    Technologies and tools I work with daily
+                                </p>
+                            </div>
 
-                </li>
-                <li class="skills-card">
-                    <h4>PYTHON</h4>
-                    <span class="iconsize">   <Icon icon="logos:python" />  </span> 
-                    <br></br>
-                    <Icon icon="icon-park:star" /> <Icon icon="icon-park:star" /> <Icon icon="icon-park:star" /> <Icon icon="icon-park:star" />
+                            <div className="skills__categories">
+                                {skillCategories.map((category, ci) => (
+                                    <div key={ci} className="skills__category">
+                                        <div className="skills__category-header">
+                                            <Icon
+                                                icon={category.icon}
+                                                className="skills__category-icon"
+                                            />
+                                            <h3 className="skills__category-label">
+                                                {category.label}
+                                            </h3>
+                                        </div>
+                                        <div className="skills__grid">
+                                            {category.skills.map((skill, si) => (
+                                                <div key={si} className="skill-chip">
+                                                    <Icon
+                                                        icon={skill.icon}
+                                                        className="skill-chip__icon"
+                                                    />
+                                                    <span className="skill-chip__name">
+                                                        {skill.name}
+                                                    </span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
 
-                </li>
-                <li class="skills-card">
-                    <h4>JAVA</h4>
-                    <span class="iconsize">  <Icon icon="logos:java" />  </span> 
-                    <br></br>
-                    <Icon icon="ant-design:star-filled" /> <Icon icon="ant-design:star-filled" /> <Icon icon="ant-design:star-filled" /> 
-                    
-                </li>
-                <li class="skills-card">
-                    <h4>FLUTTER</h4>
-                    <span class="iconsize">  <Icon icon="logos:flutter" />   </span> 
-                    <br></br>
-                    <Icon icon="ant-design:star-filled" /> <Icon icon="ant-design:star-filled" /> <Icon icon="ant-design:star-filled" /> 
-                   
-
-                </li>
-                <li class="skills-card">
-                    <h4>HTML</h4>
-                   <span class="iconsize"><Icon icon="vscode-icons:file-type-html" /></span> 
-                   <br></br>
-                    <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> 
-                </li>
-                <li class="skills-card">
-                    <h4>CSS</h4>
-                  <span class="iconsize">  <Icon icon="logos:css-3" />   </span> 
-                  <br></br>
-                    <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> 
-
-                </li>
-                <li class="skills-card">
-                    <h4>PHP</h4>
-                    <span class="iconsize">  <Icon icon="logos:php" />    </span> 
-                    <br></br>
-                    <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> 
-                   
-
-                </li>
-                <li class="skills-card">
-                    <h4>AI</h4>
-                    <span class="iconsize">     <Icon icon="eos-icons:ai" /> </span> 
-                    <br></br>
-                    <Icon icon="icon-park:star" /> <Icon icon="icon-park:star" /> <Icon icon="icon-park:star" /> <Icon icon="icon-park:star" />  
-                  
-                </li>
-
-
-
-                <li class="skills-card">
-                    <h4>SQL</h4>
-                    <span class="iconsize">     <Icon icon="carbon:sql" />  </span> 
-                    <br></br>
-                    <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> 
-                 
-                </li>
-                <li class="skills-card">
-                    <h4>REACT</h4>
-                    <span class="iconsize">   <Icon icon="logos:create-react-app" />    </span> 
-                    <br></br>
-                    <Icon icon="ant-design:star-filled" /> <Icon icon="ant-design:star-filled" /> <Icon icon="ant-design:star-filled" /> 
-                 
-
-                </li>
-                <li class="skills-card">
-                    <h4>DART</h4>
-                    <span class="iconsize">     <Icon icon="logos:dart" />  </span> 
-                    <br></br>
-                    <Icon icon="ant-design:star-filled" /> <Icon icon="ant-design:star-filled" /> <Icon icon="ant-design:star-filled" />
-                 
-
-                </li>
-                <li class="skills-card">
-                    <h4>GIT</h4>
-                    <span class="iconsize">    <Icon icon="icon-park:github" />  </span> 
-                    <br></br>
-                    <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> <Icon icon="emojione:glowing-star" /> 
-                  
-
-                </li>
-            </ul>
-        </div>
-    </section>
-
-
-
-
-                                   
-                               
-                           
-                       
+                            <div className="skills__achievements">
+                                <h3 className="skills__achievements-title">Achievements</h3>
+                                <div className="skills__achievements-grid">
+                                    <div className="achievement-card">
+                                        <span className="achievement-card__icon">🏆</span>
+                                        <span className="achievement-card__text">
+                                            Winner — Quasar Hackathon 2023
+                                        </span>
+                                    </div>
+                                    <div className="achievement-card">
+                                        <span className="achievement-card__icon">🥈</span>
+                                        <span className="achievement-card__text">
+                                            Finalist — Morgan Stanley Code-to-Give Hackathon
+                                        </span>
+                                    </div>
+                                    <div className="achievement-card">
+                                        <span className="achievement-card__icon">⭐</span>
+                                        <span className="achievement-card__text">
+                                            CodeChef Peak 2003 · Top 10% LeetCode globally · 1200+ problems
+                                        </span>
+                                    </div>
+                                    <div className="achievement-card">
+                                        <span className="achievement-card__icon">🎓</span>
+                                        <span className="achievement-card__text">
+                                            VJTI Final Year Topper — GPA 9.4 / 10
+                                        </span>
+                                    </div>
+                                    <div className="achievement-card">
+                                        <span className="achievement-card__icon">🚀</span>
+                                        <span className="achievement-card__text">
+                                            Top 5% Individual Contributor at BNY (code metrics)
+                                        </span>
+                                    </div>
+                                    <div className="achievement-card">
+                                        <span className="achievement-card__icon">👤</span>
+                                        <span className="achievement-card__text">
+                                            Youngest Development Lead at BNY
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </ProjectSectionContent>
                 </ProjectSection>
             </ProjectContainer>
-            
         </Fragment>
     )
 }
