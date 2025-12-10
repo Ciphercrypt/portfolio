@@ -67,7 +67,7 @@ const EXPERIENCE = [
             'Set up CI/CD for 8+ repos with GitLab, Docker, and Kubernetes. Cut the release cycle from quarterly to bi-weekly.',
             'Built Angular micro-frontends for settlement and fund allocation across 1000+ international accounts.',
         ],
-        tags: ['Java 17', 'Spring Boot', 'Kafka', 'Angular', 'Kubernetes', 'Reactive Programming', 'GC Tuning'],
+        tags: ['Java 17', 'Spring Boot', 'Kafka', 'Angular', 'Kubernetes', 'Reactive Programming', 'GC Tuning', 'Hazelcast'],
     },
 ]
 
