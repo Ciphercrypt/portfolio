@@ -168,7 +168,7 @@ const Home = () => {
                             </a>
                             {'  '}working on AI platform infrastructure.
                             Before that, I spent a couple of years at BNY making sure millions of
-                            financial transactions settled correctly — every single day, without drama.
+                            financial transactions settled correctly, every day, without anyone noticing.
                         </p>
                         <div className="hero__cta reveal reveal-delay-3">
                             <a href="#projects" className="btn btn--primary">see my work</a>
