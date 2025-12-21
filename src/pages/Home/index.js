@@ -214,20 +214,20 @@ const Home = () => {
                 sectionRef={projectTwo}
                 visible={visibleSections.includes(projectTwo.current)}
                 index={2}
-                title="Greenit: Fullstack reddit clone with MERN stack"
-                description1={`⦿ The full stack reddit website clone made with mern and cloudinary database. `}
-                description2="⦿ Contain all the features such as posting , commenting , upvoting."
-                description3="⦿ Famous reddit karma system implemented as it is."
-                buttonText="View Project on GitHub"      
-                buttonLink="https://github.com/Ciphercrypt/Greennit"
+                title="Cicada — End-to-End Encrypted Messaging"
+                description1="⦿ Secure messaging platform using image-based encryption for public key transmission — reduces interception attempts by 70%."
+                description2="⦿ Asymmetric cryptographic protocols via Discrete Cosine Transform (DCT)-based image encoding achieving 98% secure transmission success rate."
+                description3="⦿ Built with Java Spring Boot backend and React frontend; RESTful APIs for key generation, encryption/decryption pipelines and message persistence."
+                buttonText="View on GitHub"
+                buttonLink="https://github.com/Ciphercrypt/cicada"
                 model={{
                     type: 'laptop1',
-                    alt: '',
+                    alt: 'Cicada encrypted messaging',
                     textures: [
                         {
-                            src: ganges2,
-                            srcSet: `${ganges2} 980w, ${ganges2} 1376w`,
-                            placeholder: ganges2,
+                            src: supreme_1,
+                            srcSet: `${supreme_1} 980w, ${supreme_1} 1376w`,
+                            placeholder: supreme_1_ph,
                         },
                     ],
                 }}
