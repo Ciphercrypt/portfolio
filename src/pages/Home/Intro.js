@@ -134,6 +134,7 @@ function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) 
                                             <a href="https://github.com/ciphercrypt" target="_blank" rel="noreferrer" className="icon-button" aria-label="GitHub"><FontAwesomeIcon icon={faGithub} /></a>
                                             <a href="https://www.linkedin.com/in/avishkar-mohite/" rel="noreferrer" className="icon-button" target="_blank" aria-label="LinkedIn"><FontAwesomeIcon icon={faLinkedin} /></a>
                                             <a href="https://www.codechef.com/users/ciphercrypt" rel="noreferrer" className="icon-button" target="_blank" aria-label="CodeChef"><Icon icon="simple-icons:codechef" /></a>
+                                            <a href="https://leetcode.com/ciphercrypt/" rel="noreferrer" className="icon-button" target="_blank" aria-label="LeetCode"><Icon icon="simple-icons:leetcode" /></a>
                                         </div>   
                                                                  {/*  <a href="#3" class="icon-button facebook" target="_blank"> <Icon icon="simple-icons:codeforces" /><span></span></a>   */}
 
