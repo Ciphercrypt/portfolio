@@ -18,6 +18,16 @@ import './Profile.css'
 
 const experiences = [
     {
+        role: 'Software Engineer — AI Platform',
+        company: 'ServiceNow',
+        period: 'Feb 2026 – Present',
+        highlights: [
+            'Built telemetry & governance pipelines for AI Control Tower, processing 1M+ events/day',
+            'Designed tenant-aware APIs for AI asset mapping across multi-tenant SaaS infrastructure',
+            'Improved execution latency across 30+ enterprise AI workflows by 35%+',
+        ],
+    },
+    {
         role: 'Full-Stack Software Developer — 2',
         company: 'Bank of New York (BNY)',
         period: 'Jul 2023 – Jan 2026',
