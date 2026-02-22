@@ -89,7 +89,7 @@ function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) 
                                 />
                             </h1>
                             <Heading level={0} as="h2" className="intro__title">
-                                <VisuallyHidden className="intro__title-label">{`Designer + ${introLabel}`}</VisuallyHidden>
+                                <VisuallyHidden className="intro__title-label">{`Software Engineer | AI Systems`}</VisuallyHidden>
                                 <span
                                     aria-hidden
                                     className={classNames('intro__title-row', {
