@@ -454,3 +454,33 @@
   margin-top: var(--spaceXL);
   padding-top: var(--spaceM);
 }
+/* Tagline below hero title */
+.intro__tagline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: var(--space2XL);
+  opacity: 0;
+  font-size: calc((16 / 16) * 1rem);
+  letter-spacing: 0.05em;
+}
+
+.intro__tagline--entering,
+.intro__tagline--entered {
+  animation: fade-in var(--durationL) ease 1.8s forwards;
+}
+
+.intro__tagline-text {
+  color: rgb(var(--rgbText) / 0.6);
+  font-weight: var(--fontWeightRegular);
+}
+
+.intro__tagline-company {
+  color: rgb(var(--rgbPrimary));
+  font-weight: var(--fontWeightMedium);
+  background: rgb(var(--rgbPrimary) / 0.1);
+  border: 1px solid rgb(var(--rgbPrimary) / 0.3);
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: calc((14 / 16) * 1rem);
+}
