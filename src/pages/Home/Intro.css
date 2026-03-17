@@ -47,7 +47,7 @@
 .intro__name {
   text-transform: uppercase;
   font-size: calc((24 / 16) * 1rem);
-  letter-spacing: 0.3em;
+  letter-spacing: 0.35em;
   color: rgb(var(--rgbPrimary));
   margin-bottom: var(--space2XL);
   margin-top: 0;
