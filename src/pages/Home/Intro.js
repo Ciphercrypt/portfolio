@@ -172,6 +172,20 @@ function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) 
                                 </TransitionGroup>  
                             </Heading>
                         </header>
+
+                                <div
+                                    className={classNames(
+                                        'intro__tagline',
+                                        `intro__tagline--${status}`
+                                    )}
+                                >
+                                    <span className="intro__tagline-text">
+                                        Backend Engineer · Low-Latency Systems · AI Platform
+                                    </span>
+                                    <span className="intro__tagline-company">
+                                        @ ServiceNow
+                                    </span>
+                                </div>
                         {windowSize.width > media.tablet && (
                             <div
                                 className={classNames(
