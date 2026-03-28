@@ -175,6 +175,7 @@
 .profile__button {
   opacity: 0;
   transition: opacity var(--durationXL) ease var(--durationL);
+  margin-top: var(--spaceXL);
 }
 
 .profile__button--entered {
