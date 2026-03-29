@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react'
-import ProfileImg from 'assets/AI_M.jpeg'
+import { useEffect, useState } from 'react'
 import './index.css'
 
 // ── Typewriter ──────────────────────────────────────────────────────────────
@@ -49,7 +48,7 @@ const EXPERIENCE = [
         bullets: [
             `Building backend services for AI Control Tower — the thing that watches all the AI agents running across the enterprise and makes sure they're behaving.`,
             'Designed APIs to map AI assets to business services and infra dependencies in a multi-tenant SaaS environment. More interesting than it sounds.',
-            `Took the telemetry ingestion pipeline from 'occasionally catching fire' to 'stable at 1M+ events/day' by adding batching, async consumers, and backpressure handling.`,
+            `Rewrote the telemetry ingestion pipeline. Was occasionally dropping events under load. Now stable at 1M+ events/day — batching, async consumers, backpressure.`,
             'Found and fixed latency bottlenecks in 30+ enterprise AI workflows. Roughly 35% improvement in end-to-end response times.',
         ],
         tags: ['Java', 'Spring Boot', 'Kafka', 'SQL', 'Multi-Tenant SaaS', 'AI Governance'],
@@ -57,7 +56,7 @@ const EXPERIENCE = [
     {
         company: 'Bank of New York (BNY)',
         url: 'https://www.bny.com',
-        role: 'Full-Stack Software Developer — II',
+        role: 'Full-Stack Software Developer II',
         period: 'Jul 2023 – Jan 2026',
         location: 'Pune, India',
         bullets: [
@@ -81,15 +80,8 @@ const PROJECTS = [
         featured: true,
     },
     {
-        name: 'Cicada',
-        desc: `End-to-end encrypted messaging where the public key is embedded inside an image using DCT encoding. So even if someone intercepts the key exchange, they just see a photo. Spring Boot on the backend, React on the front. ~98% secure transmission rate in testing, ~70% reduction in interception risk compared to standard key exchange.`,
-        tags: ['Java', 'Spring Boot', 'React', 'Cryptography', 'DCT', 'REST'],
-        github: 'https://github.com/Ciphercrypt/cicada',
-        featured: true,
-    },
-    {
         name: 'Quasar — Traffic Management',
-        desc: `Hackathon project that won. Built a smart city traffic surveillance system with a YOLOv5 pipeline for real-time vehicle detection connected to a MERN dashboard. 90% accuracy on vehicle tracking. We presented it having slept maybe 4 hours total across the weekend.`,
+        desc: `Built a smart city traffic surveillance system with a YOLOv5 pipeline for real-time vehicle detection connected to a MERN dashboard. 90% accuracy on vehicle tracking. We presented it having slept maybe 4 hours total across the weekend.`,
         tags: ['Python', 'YOLOv5', 'React', 'Node.js', 'MongoDB', 'OpenCV'],
         github: 'https://github.com/Ciphercrypt/quassar',
         featured: true,
@@ -145,10 +137,16 @@ const SKILLS = [
     },
 ]
 
+const ACHIEVEMENTS = [
+    { icon: '🥈', text: 'Finalist — Morgan Stanley Code-to-Give (AI chatbot for rural entrepreneurs)' },
+    { icon: '⭐', text: 'CodeChef 2003 peak · Top 10% LeetCode globally · 1200+ problems solved' },
+    { icon: '📈', text: 'Top 5% individual contributor at BNY by code contribution metrics' },
+    { icon: '👨‍💼', text: 'Youngest development lead in my org at BNY' },
+]
+
 // ── HOME ─────────────────────────────────────────────────────────────────────
 const Home = () => {
     const typeText = useTypewriter(TYPEWRITER_TEXTS)
-    const [activeJob, setActiveJob] = useState(0)
 
     return (
         <>
@@ -223,14 +221,55 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="about__image-wrapper reveal reveal-delay-1">
-                            <div className="about__image-frame">
-                                <img src={ProfileImg} alt="Avishkar Mohite" className="about__image" />
+                        {/* Terminal-style profile card */}
+                        <div className="about__card reveal reveal-delay-1">
+                            <div className="about__card-bar">
+                                <span className="about__card-dot about__card-dot--red" />
+                                <span className="about__card-dot about__card-dot--yellow" />
+                                <span className="about__card-dot about__card-dot--green" />
+                                <span className="about__card-filename">avishkar.json</span>
+                            </div>
+                            <div className="about__card-body">
+                                <div className="about__card-row">
+                                    <span className="about__card-key">"name"</span>
+                                    <span className="about__card-sep">:</span>
+                                    <span className="about__card-str">"Avishkar Mohite"</span>
+                                </div>
+                                <div className="about__card-row">
+                                    <span className="about__card-key">"role"</span>
+                                    <span className="about__card-sep">:</span>
+                                    <span className="about__card-str">"Software Engineer"</span>
+                                </div>
+                                <div className="about__card-row">
+                                    <span className="about__card-key">"at"</span>
+                                    <span className="about__card-sep">:</span>
+                                    <span className="about__card-str about__card-str--accent">"ServiceNow"</span>
+                                </div>
+                                <div className="about__card-row">
+                                    <span className="about__card-key">"based"</span>
+                                    <span className="about__card-sep">:</span>
+                                    <span className="about__card-str">"Pune, India"</span>
+                                </div>
+                                <div className="about__card-row">
+                                    <span className="about__card-key">"edu"</span>
+                                    <span className="about__card-sep">:</span>
+                                    <span className="about__card-str">"B.Tech CSE, VJTI"</span>
+                                </div>
+                                <div className="about__card-row">
+                                    <span className="about__card-key">"focus"</span>
+                                    <span className="about__card-sep">:</span>
+                                    <span className="about__card-str">"backend · performance"</span>
+                                </div>
+                                <div className="about__card-row">
+                                    <span className="about__card-key">"open_to"</span>
+                                    <span className="about__card-sep">:</span>
+                                    <span className="about__card-str">"interesting problems"</span>
+                                </div>
                             </div>
                             <div className="about__stats">
                                 <div className="stat">
                                     <span className="stat__num">2.5+</span>
-                                    <span className="stat__label">years experience</span>
+                                    <span className="stat__label">years exp</span>
                                 </div>
                                 <div className="stat">
                                     <span className="stat__num">1200+</span>
@@ -255,47 +294,44 @@ const Home = () => {
                         <div className="section-heading-line" />
                     </div>
 
-                    <div className="exp__layout reveal">
-                        <div className="exp__tabs" role="tablist">
-                            {EXPERIENCE.map((job, i) => (
-                                <button
-                                    key={job.company}
-                                    className={'exp__tab' + (activeJob === i ? ' exp__tab--active' : '')}
-                                    onClick={() => setActiveJob(i)}
-                                    role="tab"
-                                    aria-selected={activeJob === i}
-                                >
-                                    {job.company}
-                                </button>
-                            ))}
-                        </div>
-
-                        <div className="exp__panel" role="tabpanel">
-                            <div className="exp__panel-header">
-                                <h3 className="exp__role">{EXPERIENCE[activeJob].role}</h3>
-                                <a
-                                    href={EXPERIENCE[activeJob].url}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="exp__company-link"
-                                >
-                                    @ {EXPERIENCE[activeJob].company}
-                                </a>
+                    <div className="exp__timeline">
+                        {EXPERIENCE.map((job, i) => (
+                            <div key={job.company} className="exp__item reveal" style={{ transitionDelay: `${i * 0.1}s` }}>
+                                <div className="exp__item-marker">
+                                    <div className="exp__item-dot" />
+                                    {i < EXPERIENCE.length - 1 && <div className="exp__item-line" />}
+                                </div>
+                                <div className="exp__item-content">
+                                    <div className="exp__item-header">
+                                        <div className="exp__item-title-group">
+                                            <h3 className="exp__item-role">{job.role}</h3>
+                                            <a
+                                                href={job.url}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="exp__item-company"
+                                            >
+                                                @ {job.company}
+                                            </a>
+                                        </div>
+                                        <div className="exp__item-meta">
+                                            <span className="exp__item-period">{job.period}</span>
+                                            <span className="exp__item-location">{job.location}</span>
+                                        </div>
+                                    </div>
+                                    <ul className="exp__bullets">
+                                        {job.bullets.map((b, j) => (
+                                            <li key={j}>{b}</li>
+                                        ))}
+                                    </ul>
+                                    <div className="exp__tags">
+                                        {job.tags.map(t => (
+                                            <span key={t} className="chip chip--small">{t}</span>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
-                            <p className="exp__meta">
-                                {EXPERIENCE[activeJob].period} · {EXPERIENCE[activeJob].location}
-                            </p>
-                            <ul className="exp__bullets">
-                                {EXPERIENCE[activeJob].bullets.map((b, i) => (
-                                    <li key={i}>{b}</li>
-                                ))}
-                            </ul>
-                            <div className="exp__tags">
-                                {EXPERIENCE[activeJob].tags.map(t => (
-                                    <span key={t} className="chip chip--small">{t}</span>
-                                ))}
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -313,7 +349,7 @@ const Home = () => {
                         {PROJECTS.filter(p => p.featured).map((proj, i) => (
                             <div
                                 key={proj.name}
-                                className={'project-card project-card--featured reveal' + (i % 2 === 1 ? ' project-card--alt' : '')}
+                                className="project-card project-card--featured reveal"
                                 style={{ transitionDelay: `${i * 0.1}s` }}
                             >
                                 <div className="project-card__content">
@@ -353,7 +389,7 @@ const Home = () => {
                                 <h4 className="project-small__name">{proj.name}</h4>
                                 <p className="project-small__desc">{proj.desc.split('.')[0]}.</p>
                                 <ul className="project-small__tags">
-                                    {proj.tags.slice(0,3).map(t => <li key={t}>{t}</li>)}
+                                    {proj.tags.slice(0, 3).map(t => <li key={t}>{t}</li>)}
                                 </ul>
                             </a>
                         ))}
@@ -386,14 +422,7 @@ const Home = () => {
                     <div className="achievements reveal">
                         <h3 className="achievements__heading">a few things I'm proud of</h3>
                         <div className="achievements__grid">
-                            {[
-                                { icon: '🏆', text: 'Winner — Quasar Hackathon 2023 (smart traffic management system)' },
-                                { icon: '🥈', text: 'Finalist — Morgan Stanley Code-to-Give (AI chatbot for rural entrepreneurs)' },
-                                { icon: '⭐', text: 'CodeChef 2003 peak · Top 10% LeetCode globally · 1200+ problems solved' },
-                                { icon: '🎓', text: 'Final Year Topper at VJTI Mumbai — GPA 9.4 / 10' },
-                                { icon: '📈', text: 'Top 5% individual contributor at BNY by code contribution metrics' },
-                                { icon: '👨‍💼', text: 'Youngest development lead in my org at BNY' },
-                            ].map(({ icon, text }) => (
+                            {ACHIEVEMENTS.map(({ icon, text }) => (
                                 <div key={text} className="achievement">
                                     <span className="achievement__icon">{icon}</span>
                                     <span className="achievement__text">{text}</span>
