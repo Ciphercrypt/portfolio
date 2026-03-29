@@ -42,13 +42,13 @@ const EXPERIENCE = [
     {
         company: 'ServiceNow',
         url: 'https://www.servicenow.com',
-        role: 'Software Engineer II — AI Platform',
-        period: 'Feb 2026 – Present',
+        role: 'Software Engineer II - AI Platform',
+        period: 'Feb 2026 - Present',
         location: 'Hyderabad, India',
         bullets: [
-            `Building backend services for AI Control Tower — the thing that watches all the AI agents running across the enterprise and makes sure they're behaving.`,
+            `Building backend services for AI Control Tower - the system that watches AI agents across the enterprise and keeps them in check.`,
             'Designed APIs to map AI assets to business services and infra dependencies in a multi-tenant SaaS environment. More interesting than it sounds.',
-            `Rewrote the telemetry ingestion pipeline. Was occasionally dropping events under load. Now stable at 1M+ events/day — batching, async consumers, backpressure.`,
+            `Rewrote the telemetry ingestion pipeline. It was dropping events under load. Now handles 1M+ events/day steadily - batching, async consumers, backpressure.`,
             'Found and fixed latency bottlenecks in 30+ enterprise AI workflows. Roughly 35% improvement in end-to-end response times.',
         ],
         tags: ['Java', 'Spring Boot', 'Kafka', 'SQL', 'Multi-Tenant SaaS', 'AI Governance'],
@@ -57,10 +57,10 @@ const EXPERIENCE = [
         company: 'Bank of New York (BNY)',
         url: 'https://www.bny.com',
         role: 'Full-Stack Software Developer II',
-        period: 'Jul 2023 – Jan 2026',
+        period: 'Jul 2023 - Jan 2026',
         location: 'Pune, India',
         bullets: [
-            'Led a 9-person team building the post-trade monitoring system. The one that alerts you when a large bank is about to overdraft — so it really has to work.',
+            'Led a 9-person team building the post-trade monitoring system - the one that alerts you when a large bank is about to overdraft. So it really has to work.',
             'Built a cash projection system that processes 2M+ trades every 15 minutes. Used to be a batch job. Turned it into a near-real-time pipeline.',
             'Optimised wire and SWIFT transaction ingestion (~10M transactions/day). Fixed a batch that was consistently slow and failing; cut processing time by 10s and failures by 30%.',
             'Set up CI/CD for 8+ repos with GitLab, Docker, and Kubernetes. Cut the release cycle from quarterly to bi-weekly.',
@@ -74,21 +74,21 @@ const EXPERIENCE = [
 const PROJECTS = [
     {
         name: 'LettuceCache',
-        desc: `A semantic caching layer that sits between your app and whatever LLM you're using. The idea is simple — why pay for the same API call twice? Redis handles exact matches in <30ms; FAISS handles 'close enough' via vector similarity. The tricky part was preventing a similar question in a different conversation context from returning a wrong cached answer. Solved that with a context signature.`,
+        desc: `A semantic caching layer that sits between your app and whatever LLM you're using. The idea is simple: why pay for the same API call twice? Redis handles exact matches in <30ms; FAISS handles 'close enough' via vector similarity. The tricky part was preventing a similar question in a different conversation context from returning a wrong cached answer. Solved that with a context signature.`,
         tags: ['C++17', 'Redis', 'FAISS', 'FastAPI', 'Docker', 'Kubernetes'],
         github: 'https://github.com/Ciphercrypt/LettuceCache',
         featured: true,
     },
     {
-        name: 'Quasar — Traffic Management',
+        name: 'Quasar - Traffic Management',
         desc: `Built a smart city traffic surveillance system with a YOLOv5 pipeline for real-time vehicle detection connected to a MERN dashboard. 90% accuracy on vehicle tracking. We presented it having slept maybe 4 hours total across the weekend.`,
         tags: ['Python', 'YOLOv5', 'React', 'Node.js', 'MongoDB', 'OpenCV'],
         github: 'https://github.com/Ciphercrypt/quassar',
         featured: true,
     },
     {
-        name: 'Stree — AI Chatbot',
-        desc: `Morgan Stanley Code-to-Give finalist. Multi-channel conversational AI for rural women entrepreneurs in India — web bot, voice telephony for feature phones, 3D avatar interface, and social media bot. The telephony piece was the most interesting challenge; most users didn't have smartphones.`,
+        name: 'Stree - AI Chatbot',
+        desc: `Morgan Stanley Code-to-Give finalist. Multi-channel conversational AI for rural women entrepreneurs in India - web bot, voice telephony for feature phones, 3D avatar, and social media bot. The telephony piece was the most interesting challenge; most users didn't have smartphones.`,
         tags: ['Dialogflow', 'Flask', 'React', 'Twilio', 'NLP'],
         github: 'https://github.com/Ciphercrypt/MS-code-to-give',
         featured: false,
@@ -138,7 +138,7 @@ const SKILLS = [
 ]
 
 const ACHIEVEMENTS = [
-    { icon: '🥈', text: 'Finalist — Morgan Stanley Code-to-Give (AI chatbot for rural entrepreneurs)' },
+    { icon: '🥈', text: 'Finalist - Morgan Stanley Code-to-Give (AI chatbot for rural entrepreneurs)' },
     { icon: '⭐', text: 'CodeChef 2003 peak · Top 10% LeetCode globally · 1200+ problems solved' },
     { icon: '📈', text: 'Top 5% individual contributor at BNY by code contribution metrics' },
     { icon: '👨‍💼', text: 'Youngest development lead in my org at BNY' },
@@ -166,7 +166,7 @@ const Home = () => {
                             </a>
                             {'  '}working on AI platform infrastructure.
                             Before that, I spent a couple of years at BNY making sure millions of
-                            financial transactions settled correctly, every day, without anyone noticing.
+                            financial transactions settled correctly every day, without anyone noticing.
                         </p>
                         <div className="hero__cta reveal reveal-delay-3">
                             <a href="#projects" className="btn btn--primary">see my work</a>
@@ -194,9 +194,8 @@ const Home = () => {
                     <div className="about__grid">
                         <div className="about__text">
                             <p className="reveal">
-                                I'm a software engineer based in India. I like making systems fast — really fast.
-                                The kind of fast where a human can't tell anything is happening, but the numbers
-                                look great.
+                                I'm a software engineer based in India. I like making systems fast - like, really fast.
+                                The kind of fast where nothing seems to be happening, but the numbers tell a different story.
                             </p>
                             <p className="reveal reveal-delay-1">
                                 Over two years at BNY, I helped build the backend that keeps post-trade processing
@@ -207,8 +206,8 @@ const Home = () => {
                             <p className="reveal reveal-delay-2">
                                 These days I'm at ServiceNow, working on the infrastructure layer for their AI
                                 platform. Different problem space, same obsession with performance. Outside of work
-                                I do competitive programming — solved 1200+ problems across platforms, peaked at
-                                CodeChef 2003. I like the clarity of having a problem with a correct answer.
+                                I also do competitive programming - solved 1200+ problems, peaked at CodeChef 2003.
+                                I like having a problem where there is one correct answer.
                             </p>
 
                             <div className="about__currently reveal reveal-delay-2">
@@ -440,7 +439,7 @@ const Home = () => {
                         <p className="section-label reveal">05. contact</p>
                         <h2 className="contact__heading reveal">get in touch</h2>
                         <p className="contact__desc reveal">
-                            I'm currently at ServiceNow so I'm not actively looking —
+                            I'm currently at ServiceNow so I'm not actively looking,
                             but if you have an interesting problem you want to talk through,
                             I'm always up for it. Also happy to connect if you're working on
                             something in the distributed systems / performance space.
