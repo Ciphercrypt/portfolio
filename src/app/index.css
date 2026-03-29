@@ -1,25 +1,85 @@
-:root {
-  --bg: #090a13;
-  --bg-card: #0f1122;
-  --bg-hover: #141530;
-  --border: rgba(100, 255, 218, 0.08);
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --text: #ccd6f6;
-  --text-muted: #8892a4;
-  --text-light: #a8b2d8;
-  --accent: #64ffda;
-  --accent-tint: rgba(100, 255, 218, 0.07);
+/* ── Theme tokens ────────────────────────────────────────────────────────── */
+:root,
+[data-theme="dark"] {
+  --bg:                #090a13;
+  --bg-card:           #0f1122;
+  --bg-hover:          #141530;
+  --border:            rgba(100, 255, 218, 0.08);
+  --border-subtle:     rgba(255, 255, 255, 0.06);
+  --text:              #ccd6f6;
+  --text-muted:        #8892a4;
+  --text-light:        #a8b2d8;
+  --accent:            #64ffda;
+  --accent-rgb:        100, 255, 218;
+  --accent-tint:       rgba(100, 255, 218, 0.07);
   --accent-tint-hover: rgba(100, 255, 218, 0.13);
-  --purple: #c084fc;
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
-  --nav-height: 70px;
-  --max-width: 1000px;
-  --section-pad: 100px;
-  --ease: cubic-bezier(0.65, 0.05, 0.36, 1);
-  --trans: 0.25s var(--ease);
+  --nav-scrolled-bg:   rgba(9, 10, 19, 0.95);
+  --shadow:            rgba(0, 0, 0, 0.4);
 }
 
+[data-theme="light"] {
+  --bg:                #f5f7ff;
+  --bg-card:           #ffffff;
+  --bg-hover:          #eef1ff;
+  --border:            rgba(13, 148, 136, 0.12);
+  --border-subtle:     rgba(0, 0, 0, 0.07);
+  --text:              #0f172a;
+  --text-muted:        #475569;
+  --text-light:        #334155;
+  --accent:            #0d9488;
+  --accent-rgb:        13, 148, 136;
+  --accent-tint:       rgba(13, 148, 136, 0.08);
+  --accent-tint-hover: rgba(13, 148, 136, 0.14);
+  --nav-scrolled-bg:   rgba(245, 247, 255, 0.96);
+  --shadow:            rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="midnight"] {
+  --bg:                #0d0015;
+  --bg-card:           #120022;
+  --bg-hover:          #180030;
+  --border:            rgba(192, 132, 252, 0.1);
+  --border-subtle:     rgba(255, 255, 255, 0.05);
+  --text:              #e2d9f3;
+  --text-muted:        #9478c0;
+  --text-light:        #c4b0e8;
+  --accent:            #c084fc;
+  --accent-rgb:        192, 132, 252;
+  --accent-tint:       rgba(192, 132, 252, 0.08);
+  --accent-tint-hover: rgba(192, 132, 252, 0.15);
+  --nav-scrolled-bg:   rgba(13, 0, 21, 0.96);
+  --shadow:            rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="hacker"] {
+  --bg:                #080f08;
+  --bg-card:           #0d160d;
+  --bg-hover:          #111d11;
+  --border:            rgba(0, 255, 65, 0.08);
+  --border-subtle:     rgba(0, 255, 65, 0.04);
+  --text:              #c8e8c8;
+  --text-muted:        #5a8a5a;
+  --text-light:        #8abd8a;
+  --accent:            #00ff41;
+  --accent-rgb:        0, 255, 65;
+  --accent-tint:       rgba(0, 255, 65, 0.06);
+  --accent-tint-hover: rgba(0, 255, 65, 0.12);
+  --nav-scrolled-bg:   rgba(8, 15, 8, 0.96);
+  --shadow:            rgba(0, 0, 0, 0.5);
+}
+
+/* ── Shared tokens (no theme dependency) ─────────────────────────────────── */
+:root {
+  --font:        'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mono:        'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  --nav-height:  70px;
+  --max-width:   1000px;
+  --section-pad: 100px;
+  --ease:        cubic-bezier(0.65, 0.05, 0.36, 1);
+  --trans:       0.25s var(--ease);
+}
+
+/* ── Base ────────────────────────────────────────────────────────────────── */
 body {
   font-family: var(--font);
   font-size: 16px;
@@ -27,13 +87,15 @@ body {
   background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 ::selection {
-  background: rgba(100, 255, 218, 0.25);
+  background: var(--accent-tint-hover);
   color: var(--accent);
 }
 
+/* ── Layout ──────────────────────────────────────────────────────────────── */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -48,6 +110,7 @@ body {
   padding: var(--section-pad) 0;
 }
 
+/* ── Section headings ────────────────────────────────────────────────────── */
 .section-label {
   font-family: var(--mono);
   font-size: 13px;
@@ -77,6 +140,7 @@ body {
   max-width: 280px;
 }
 
+/* ── Reveal animation ────────────────────────────────────────────────────── */
 .reveal {
   opacity: 0;
   transform: translateY(24px);

@@ -20,6 +20,12 @@
     <title>Avishkar Mohite</title>
   </head>
   <body>
+    <script>
+      (function() {
+        var t = localStorage.getItem('portfolio-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
     <div id="root"></div>
   </body>
 </html>
