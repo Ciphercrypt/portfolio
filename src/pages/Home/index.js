@@ -439,10 +439,9 @@ const Home = () => {
                         <p className="section-label reveal">05. contact</p>
                         <h2 className="contact__heading reveal">get in touch</h2>
                         <p className="contact__desc reveal">
-                            I'm currently at ServiceNow so I'm not actively looking,
-                            but if you have an interesting problem you want to talk through,
-                            I'm always up for it. Also happy to connect if you're working on
-                            something in the distributed systems / performance space.
+                            Whether it's a job, a project, a random idea, or just want to talk
+                            about distributed systems and performance - my inbox is open.
+                            I try to reply to everyone.
                         </p>
                         <a
                             href="mailto:avishkar.mohite.eng@gmail.com"
