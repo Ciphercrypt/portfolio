@@ -19,6 +19,7 @@ import tm_1 from 'assets/tm1.jpg'
 import tm_1_ph from 'assets/tm1_blurr.png'
 
 
+import supreme_1 from 'assets/supreme_1_blur.jpeg'
 import supreme_1_ph from 'assets/supreme_1.jpg'
 
 import Uses from 'pages/Uses/index'
