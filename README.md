@@ -1,36 +1,45 @@
-# portfolio
-This repo contains code for my portfolio . If you find it #cool , then clone it or fork , and make outstanding website of your own. And don't forget to twinkle that little start there...
-# Personal portfolio
+# Avishkar Mohite - Portfolio
 
-[![Live Site](https://github.com/Ciphercrypt/portfolio/blob/master/screenshots/white1.jpeg)](https://ciphercrypt.github.io/portfolio/)
-##
-[![Live Site](https://github.com/Ciphercrypt/portfolio/blob/master/screenshots/black1.jpeg)](https://ciphercrypt.github.io/portfolio/)
-##
-[![Live Site](https://github.com/Ciphercrypt/portfolio/blob/master/screenshots/white2.jpeg)](https://ciphercrypt.github.io/portfolio/)
-##
-[![Live Site](https://github.com/Ciphercrypt/portfolio/blob/master/screenshots/white3.jpeg)](https://ciphercrypt.github.io/portfolio/)
-##
-[![Live Site](https://github.com/Ciphercrypt/portfolio/blob/master/screenshots/white4.jpeg)](https://ciphercrypt.github.io/portfolio/)
-##
-##
+Personal portfolio site. Built with React, deployed on GitHub Pages.
 
+**Live:** https://ciphercrypt.github.io/portfolio/
 
-## To Install & run
+---
 
-Make sure you have nodejs and npm installed. Install dependencies with:
+## Screenshots
+
+### Dark theme
+[![Hero - Dark](screenshots/hero_dark.png)](https://ciphercrypt.github.io/portfolio/)
+
+[![About - Dark](screenshots/about_dark.png)](https://ciphercrypt.github.io/portfolio/#about)
+
+[![Experience - Dark](screenshots/experience_dark.png)](https://ciphercrypt.github.io/portfolio/#experience)
+
+[![Projects - Dark](screenshots/projects_dark.png)](https://ciphercrypt.github.io/portfolio/#projects)
+
+### Other themes
+
+| Light | Midnight | Hacker |
+|-------|----------|--------|
+| [![Light](screenshots/hero_light.png)](https://ciphercrypt.github.io/portfolio/) | [![Midnight](screenshots/hero_midnight.png)](https://ciphercrypt.github.io/portfolio/) | [![Hacker](screenshots/hero_hacker.png)](https://ciphercrypt.github.io/portfolio/) |
+
+---
+
+## Running locally
 
 ```bash
-npm install 
-```
-
-Once it is done you can run it on local server using :
-
-```bash
+npm install
 npm start
 ```
 
-Or  create a production build:
+Build for production:
 
 ```bash
 npm run build
+```
+
+Deploy to GitHub Pages:
+
+```bash
+npm run deploy
 ```
